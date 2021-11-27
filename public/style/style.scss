@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+$fg: #fff;
+@mixin flex($jus: center, $alg: center){
+    display: flex;
+    justify-content: $jus;
+    align-items: $alg;
+}
+
+@mixin dim($ln, $hg){
+    width: $ln;
+    height: $hg;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+    @media (min-width: 700px) {
+      font-size: calc(10px + 0.5vw);
+    }
+  }
+
+body{
+    background-color: #222222;
+}
+
+header{
+    color: $fg;
+    font-family: 'Allura', cursive;
+    @include dim(100vw, auto);
+    padding: 10vh 0 6vh 0;
+    text-align: center;   
+    font-size: 2rem;
+    border: 1px solid orange;
+}
+
+.container{
+    border: 1px solid green;
+    .canvas{
+        border: 1px solid white;
+    }
+}

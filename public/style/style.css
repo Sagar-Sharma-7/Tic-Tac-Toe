@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+
+@media (min-width: 700px) {
+  html {
+    font-size: calc(10px + 0.5vw);
+  }
+}
+
+body {
+  background-color: #222222;
+}
+
+header {
+  color: #fff;
+  font-family: 'Allura', cursive;
+  width: 100vw;
+  height: auto;
+  padding: 10vh 0 6vh 0;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid orange;
+}
+
+.container {
+  border: 1px solid green;
+}
+
+.container .canvas {
+  border: 1px solid white;
+}
+/*# sourceMappingURL=style.css.map */
