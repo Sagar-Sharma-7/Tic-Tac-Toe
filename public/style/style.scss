@@ -53,18 +53,36 @@ header{
             background-color: #3d3d3d;
             border-radius: 10px;
             cursor: pointer;
+            @include flex();
+            font-size: 2.5rem;
+            color: $fg;
+            font-family: 'Allura', cursive;
+            font-weight: 900;
             &:hover{
                 background-color: #494949;
             }
         }
     }
     button{
-        font-size: 3rem;
+        font-size: 2.4rem;
         background-color: transparent;
-        border-radius: 50px;
         border: none;
         outline: none;
+        border-radius: 10px;
         color: $fg;
         cursor: pointer;
+    }
+    #p_again{
+        display: none;
+    }
+    #start_btn{
+        background-color: #494949;
+        width: 250px;
+        padding: 2vh;
+        border-bottom: 2px solid #494949;
+        transition: 500ms;
+        &:hover{
+            border-bottom: 2px solid white;
+        }
     }
 }

@@ -63,6 +63,19 @@ header {
   background-color: #3d3d3d;
   border-radius: 10px;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: 'Allura', cursive;
+  font-weight: 900;
 }
 
 .container .canvas .box:hover {
@@ -70,12 +83,29 @@ header {
 }
 
 .container button {
-  font-size: 3rem;
+  font-size: 2.4rem;
   background-color: transparent;
-  border-radius: 50px;
   border: none;
   outline: none;
+  border-radius: 10px;
   color: #fff;
   cursor: pointer;
+}
+
+.container #p_again {
+  display: none;
+}
+
+.container #start_btn {
+  background-color: #494949;
+  width: 250px;
+  padding: 2vh;
+  border-bottom: 2px solid #494949;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.container #start_btn:hover {
+  border-bottom: 2px solid white;
 }
 /*# sourceMappingURL=style.css.map */
