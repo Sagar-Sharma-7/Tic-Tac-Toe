@@ -50,7 +50,9 @@ header{
         grid-template-rows: repeat(3, 17vh);
         grid-gap: 5px;
         .box{
-            background-color: #3d3d3d;
+            background: #222222;
+            box-shadow: inset 5px 5px 10px #171717,
+            inset -5px -5px 10px #2d2d2d;
             border-radius: 10px;
             cursor: pointer;
             @include flex();
@@ -58,13 +60,14 @@ header{
             color: $fg;
             font-family: 'Allura', cursive;
             font-weight: 900;
-            &:hover{
-                background-color: #494949;
-            }
         }
     }
+    .turn{
+        color: orange;
+        font-size: 2rem;
+    }
     button{
-        font-size: 2.4rem;
+        font-size: 2rem;
         background-color: transparent;
         border: none;
         outline: none;
@@ -76,7 +79,9 @@ header{
         display: none;
     }
     #start_btn{
-        background-color: #494949;
+        background: #222222;
+        box-shadow: inset 7px 7px 14px #171717,
+            inset -7px -7px 14px #2d2d2d;
         width: 250px;
         padding: 2vh;
         border-bottom: 2px solid #494949;

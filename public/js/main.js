@@ -9,7 +9,7 @@ const b3 = document.querySelector("#b3");
 const c1 = document.querySelector("#c1");
 const c2 = document.querySelector("#c2");
 const c3 = document.querySelector("#c3");
-
+const turn_box = document.querySelector(".turn");
 const start_btn = document.querySelector("#start_btn");
 const p_again = document.querySelector("#p_again");
 
@@ -18,15 +18,21 @@ const p_again = document.querySelector("#p_again");
 start_btn.addEventListener("click", () => {
     start_btn.style.display = "none";
     p_again.style.display = "block";
+    const p1 = prompt("Enter player1 name: ");
+    const p2 = prompt("Enter player2 name: ")
 
-    // enabling click
-    boxes.forEach((box) => {
-        box.addEventListener("click", () => {
-            if (box.innerHTML == ""){
-                box.innerHTML = "X"
-            }
-        });
-    });
+
+    //  enabling click
+     boxes.forEach((box) => {
+         box.addEventListener("click", () => {
+             box.innerHTML = "X";
+             turn_box.innerHTML = "It's Computer's Turn.";
+             // timer
+             setTimeout(() => {
+                 
+             }, 1000);
+         });
+     });
 });
 
 
@@ -35,6 +41,9 @@ start_btn.addEventListener("click", () => {
 p_again.addEventListener("click", () => {
     boxes.forEach((box) => {
         box.innerHTML = "";
+        turn_box.innerHTML = "";
+        start_btn.style.display = "block";
+        p_again.style.display = "none";
     });
 });
 

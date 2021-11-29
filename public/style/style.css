@@ -60,7 +60,9 @@ header {
 }
 
 .container .canvas .box {
-  background-color: #3d3d3d;
+  background: #222222;
+  -webkit-box-shadow: inset 5px 5px 10px #171717, inset -5px -5px 10px #2d2d2d;
+          box-shadow: inset 5px 5px 10px #171717, inset -5px -5px 10px #2d2d2d;
   border-radius: 10px;
   cursor: pointer;
   display: -webkit-box;
@@ -78,12 +80,13 @@ header {
   font-weight: 900;
 }
 
-.container .canvas .box:hover {
-  background-color: #494949;
+.container .turn {
+  color: orange;
+  font-size: 2rem;
 }
 
 .container button {
-  font-size: 2.4rem;
+  font-size: 2rem;
   background-color: transparent;
   border: none;
   outline: none;
@@ -97,7 +100,9 @@ header {
 }
 
 .container #start_btn {
-  background-color: #494949;
+  background: #222222;
+  -webkit-box-shadow: inset 7px 7px 14px #171717, inset -7px -7px 14px #2d2d2d;
+          box-shadow: inset 7px 7px 14px #171717, inset -7px -7px 14px #2d2d2d;
   width: 250px;
   padding: 2vh;
   border-bottom: 2px solid #494949;
