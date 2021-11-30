@@ -18,19 +18,25 @@ const p_again = document.querySelector("#p_again");
 start_btn.addEventListener("click", () => {
     start_btn.style.display = "none";
     p_again.style.display = "block";
-    const p1 = prompt("Enter player1 name: ");
-    const p2 = prompt("Enter player2 name: ")
+    // const n1 = prompt("Name of player 1: ");
+    // const n2 = prompt("Name of player 2: ");
 
-
+let flag = 1
     //  enabling click
      boxes.forEach((box) => {
          box.addEventListener("click", () => {
-             box.innerHTML = "X";
-             turn_box.innerHTML = "It's Computer's Turn.";
-             // timer
-             setTimeout(() => {
-                 
-             }, 1000);
+             if(flag == 1){
+                 box.innerHTML = "X";
+                 box.disabled = true;
+                 flag = 0
+                 turn_box.innerHTML = "It's Player2's Turn.";
+             }else{
+                 box.innerHTML = "0";
+                 box.disabled = true;
+                 flag = 1
+                 turn_box.innerHTML = "It's Player1's Turn.";
+             }
+             
          });
      });
 });
@@ -39,11 +45,16 @@ start_btn.addEventListener("click", () => {
 
 // play again
 p_again.addEventListener("click", () => {
+    let i=0;
     boxes.forEach((box) => {
         box.innerHTML = "";
         turn_box.innerHTML = "";
-        start_btn.style.display = "block";
-        p_again.style.display = "none";
+        
+        while(i < 9){
+                boxes[i].disabled = false;
+                console.log(i);
+                i++;
+        }
     });
 });
 
