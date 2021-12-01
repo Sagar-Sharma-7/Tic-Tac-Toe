@@ -48,11 +48,15 @@ let flag = 1;
                  }else if(c1 == "X" && c2 == "X" && c3 == "X"){
                      console.log("X wins");
                  }else if(a1 == "X" && b1 == "X" && c1 == "X"){
-                     console.log(("X wins"));
+                     console.log("X wins");
                  }else if(a2 == "X" && b2 == "X" && c2 == "X"){
-                    console.log(("X wins"));
+                    console.log("X wins");
                 }else if(a3 == "X" && b3 == "X" && c3 == "X"){
-                    console.log(("X wins"));
+                    console.log("X wins");
+                }else if(a1 == "X" && b2 == "X" && c3 == "X"){
+                    console.log("X wins");
+                }else if(a3 == "X" && b2 == "X" && c1 == "X"){
+                    console.log("X wins");
                 }
 
 
