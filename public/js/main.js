@@ -53,10 +53,6 @@ let flag = 1;
                     console.log("X wins");
                 }else if(a3 == "X" && b3 == "X" && c3 == "X"){
                     console.log("X wins");
-                }else if(a1 == "X" && b2 == "X" && c3 == "X"){
-                    console.log("X wins");
-                }else if(a3 == "X" && b2 == "X" && c1 == "X"){
-                    console.log("X wins");
                 }
 
 
@@ -72,6 +68,36 @@ let flag = 1;
                 turn_box.innerHTML = "Player2"
              }else{
                  box.innerHTML = "0";
+
+                 let a1 = document.querySelector("#a1").innerHTML;
+                 let a2 = document.querySelector("#a2").innerHTML;
+                 let a3 = document.querySelector("#a3").innerHTML;
+                 let b1 = document.querySelector("#b1").innerHTML;
+                 let b2 = document.querySelector("#b2").innerHTML;
+                 let b3 = document.querySelector("#b3").innerHTML;
+                 let c1 = document.querySelector("#c1").innerHTML;
+                 let c2 = document.querySelector("#c2").innerHTML;
+                 let c3 = document.querySelector("#c3").innerHTML;
+
+                 // check
+                 if(a1 == "0" && a2 == "0" && a3 == "0"){
+                     console.log(" 0 wins");
+                 }else if(b1 == "0" && b2 == "0" && b3 == "0"){
+                     console.log("0 wins");
+                 }else if(c1 == "0" && c2 == "0" && c3 == "0"){
+                     console.log("0 wins");
+                 }else if(a1 == "0" && b1 == "0" && c1 == "0"){
+                     console.log("0 wins");
+                 }else if(a2 == "0" && b2 == "0" && c2 == "0"){
+                    console.log("0 wins");
+                }else if(a3 == "0" && b3 == "0" && c3 == "0"){
+                    console.log("0 wins");
+                }else if(a1 == "0" && b2 == "0" && c3 == "0"){
+                    console.log("0 wins");
+                }else if(a3 == "0" && b2 == "0" && c1 == "0"){
+                    console.log("0 wins");
+                };
+
                  box.disabled = true;
                  flag = 1;
                 //  if(n == 0){
