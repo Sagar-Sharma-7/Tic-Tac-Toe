@@ -14,33 +14,49 @@ const start_btn = document.querySelector("#start_btn");
 const p_again = document.querySelector("#p_again");
 
 
+const n1 = prompt("Name of player 1: ");
+const n2 = prompt("Name of player 2: ");
+
 // start game
 start_btn.addEventListener("click", () => {
     start_btn.style.display = "none";
     p_again.style.display = "block";
-    // const n1 = prompt("Name of player 1: ");
-    // const n2 = prompt("Name of player 2: ");
+     
+    // first turn
+    const n = Math.floor(Math.random() *2);
+             if(n == 0){
+                turn_box.innerHTML = `It's ${n1}'s Turn.`
+            }else{
+                turn_box.innerHTML = `It's ${n2}'s Turn.`
+            };
 
-let flag = 1
+let flag = 1;
     //  enabling click
      boxes.forEach((box) => {
          box.addEventListener("click", () => {
+
              if(flag == 1){
                  box.innerHTML = "X";
                  box.disabled = true;
-                 flag = 0
-                 turn_box.innerHTML = "It's Player2's Turn.";
+                 flag = 0;
+                 if(n == 1){
+                    turn_box.innerHTML = `It's ${n1}'s Turn.`
+                }else{
+                    turn_box.innerHTML = `It's ${n2}'s Turn.`
+                };
              }else{
                  box.innerHTML = "0";
                  box.disabled = true;
-                 flag = 1
-                 turn_box.innerHTML = "It's Player1's Turn.";
-             }
-             
+                 flag = 1;
+                 if(n == 0){
+                    turn_box.innerHTML = `It's ${n1}'s Turn.`
+                }else{
+                    turn_box.innerHTML = `It's ${n2}'s Turn.`
+                };
+             };
          });
      });
 });
-
 
 
 // play again
@@ -48,8 +64,7 @@ p_again.addEventListener("click", () => {
     let i=0;
     boxes.forEach((box) => {
         box.innerHTML = "";
-        turn_box.innerHTML = "";
-        
+        turn_box.innerHTML = "";   
         while(i < 9){
                 boxes[i].disabled = false;
                 console.log(i);
