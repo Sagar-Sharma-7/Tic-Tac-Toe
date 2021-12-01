@@ -53,7 +53,11 @@ let flag = 1;
                     console.log("X wins");
                 }else if(a3 == "X" && b3 == "X" && c3 == "X"){
                     console.log("X wins");
-                }
+                }else if(a1 == "X" && b2 == "X" && c3 == "X"){
+                    console.log("X wins");
+                }else if(a3 == "X" && b2 == "X" && c1 == "X"){
+                    console.log("X wins");
+                };
 
 
                  box.disabled = true;
