@@ -61,19 +61,19 @@ let flag = 1;
                  if(a1 == "X" && a2 == "X" && a3 == "X"){
                      win(boxes[0], boxes[1], boxes[2]);
                  }else if(b1 == "X" && b2 == "X" && b3 == "X"){
-                     console.log("X wins");
+                    win(boxes[3], boxes[4], boxes[5]);
                  }else if(c1 == "X" && c2 == "X" && c3 == "X"){
-                     console.log("X wins");
+                    win(boxes[6], boxes[7], boxes[8]);
                  }else if(a1 == "X" && b1 == "X" && c1 == "X"){
-                     console.log("X wins");
+                    win(boxes[0], boxes[3], boxes[6]);
                  }else if(a2 == "X" && b2 == "X" && c2 == "X"){
-                    console.log("X wins");
+                    win(boxes[1], boxes[4], boxes[7]);
                 }else if(a3 == "X" && b3 == "X" && c3 == "X"){
-                    console.log("X wins");
+                    win(boxes[2], boxes[5], boxes[8]);
                 }else if(a1 == "X" && b2 == "X" && c3 == "X"){
-                    console.log("X wins");
+                    win(boxes[0], boxes[4], boxes[8]);
                 }else if(a3 == "X" && b2 == "X" && c1 == "X"){
-                    console.log("X wins");
+                    win(boxes[2], boxes[4], boxes[6]);
                 };
 
 
@@ -101,22 +101,22 @@ let flag = 1;
 
                  // check
                  if(a1 == "0" && a2 == "0" && a3 == "0"){
-                    console.log("0 wins");
-                 }else if(b1 == "0" && b2 == "0" && b3 == "0"){
-                     console.log("0 wins");
-                 }else if(c1 == "0" && c2 == "0" && c3 == "0"){
-                     console.log("0 wins");
-                 }else if(a1 == "0" && b1 == "0" && c1 == "0"){
-                     console.log("0 wins");
-                 }else if(a2 == "0" && b2 == "0" && c2 == "0"){
-                    console.log("0 wins");
-                }else if(a3 == "0" && b3 == "0" && c3 == "0"){
-                    console.log("0 wins");
-                }else if(a1 == "0" && b2 == "0" && c3 == "0"){
-                    console.log("0 wins");
-                }else if(a3 == "0" && b2 == "0" && c1 == "0"){
-                    console.log("0 wins");
-                };
+                    win(boxes[0], boxes[1], boxes[2]);
+                }else if(b1 == "0" && b2 == "0" && b3 == "0"){
+                   win(boxes[3], boxes[4], boxes[5]);
+                }else if(c1 == "0" && c2 == "0" && c3 == "0"){
+                   win(boxes[6], boxes[7], boxes[8]);
+                }else if(a1 == "0" && b1 == "0" && c1 == "0"){
+                   win(boxes[0], boxes[3], boxes[6]);
+                }else if(a2 == "0" && b2 == "0" && c2 == "0"){
+                   win(boxes[1], boxes[4], boxes[7]);
+               }else if(a3 == "0" && b3 == "0" && c3 == "0"){
+                   win(boxes[2], boxes[5], boxes[8]);
+               }else if(a1 == "0" && b2 == "0" && c3 == "0"){
+                   win(boxes[0], boxes[4], boxes[8]);
+               }else if(a3 == "0" && b2 == "0" && c1 == "0"){
+                   win(boxes[2], boxes[4], boxes[6]);
+               };
 
                  box.disabled = true;
                  flag = 1;
