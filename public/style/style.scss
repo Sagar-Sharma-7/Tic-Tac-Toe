@@ -91,3 +91,12 @@ header{
         }
     }
 }
+
+@media all and (max-width: 600px){
+    .container{
+        .canvas{
+            grid-template-columns: repeat(3, 14vh);
+            grid-template-rows: repeat(3, 14vh);
+        }
+    }
+}

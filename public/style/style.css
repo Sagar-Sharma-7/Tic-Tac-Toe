@@ -113,4 +113,13 @@ header {
 .container #start_btn:hover {
   border-bottom: 2px solid white;
 }
+
+@media all and (max-width: 600px) {
+  .container .canvas {
+    -ms-grid-columns: (14vh)[3];
+        grid-template-columns: repeat(3, 14vh);
+    -ms-grid-rows: (14vh)[3];
+        grid-template-rows: repeat(3, 14vh);
+  }
+}
 /*# sourceMappingURL=style.css.map */
