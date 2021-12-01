@@ -1,13 +1,30 @@
 const boxes = document.querySelectorAll(".box");
 
 
+
 const turn_box = document.querySelector(".turn");
 const start_btn = document.querySelector("#start_btn");
 const p_again = document.querySelector("#p_again");
 
 
-// const n1 = prompt("Name of player 1: ");
-// const n2 = prompt("Name of player 2: ");
+const n1 = prompt("Name of player 1: ");
+const n2 = prompt("Name of player 2: ");
+
+
+
+// winning function
+const win = (x,y,z) => {
+    let k = 0;
+    while(k < 8){
+        boxes[k].style.color = `#555555`;
+        boxes[k].disabled = true;
+        k = k+1;
+    }
+    x.style.color = `#56F85B`;
+    y.style.color = `#56F85B`;
+    z.style.color = `#56F85B`;
+    $(".turn").slideUp();
+}
 
 // start game
 start_btn.addEventListener("click", () => {
@@ -15,18 +32,18 @@ start_btn.addEventListener("click", () => {
     p_again.style.display = "block";
      
     // first turn
-    // const n = Math.floor(Math.random() *2);
-    //          if(n == 0){
-    //             turn_box.innerHTML = `It's ${n1}'s Turn.`
-    //         }else{
-    //             turn_box.innerHTML = `It's ${n2}'s Turn.`
-    //         };
+     const n = Math.floor(Math.random() *2);
+              if(n == 0){
+                 turn_box.innerHTML = `It's ${n1}'s Turn.`
+             }else{
+                 turn_box.innerHTML = `It's ${n2}'s Turn.`
+             };
 
 let flag = 1;
     //  enabling click
      boxes.forEach((box) => {
          box.addEventListener("click", () => {
-             turn_box.innerHTML = "Player1"
+             
             
              if(flag == 1){
                  box.innerHTML = "X";
@@ -42,7 +59,7 @@ let flag = 1;
 
                  // check
                  if(a1 == "X" && a2 == "X" && a3 == "X"){
-                     console.log(" X wins");
+                     win(boxes[0], boxes[1], boxes[2]);
                  }else if(b1 == "X" && b2 == "X" && b3 == "X"){
                      console.log("X wins");
                  }else if(c1 == "X" && c2 == "X" && c3 == "X"){
@@ -64,12 +81,11 @@ let flag = 1;
                  
 
                  flag = 0;
-                //  if(n == 1){
-                //     turn_box.innerHTML = `It's ${n1}'s Turn.`
-                // }else{
-                //     turn_box.innerHTML = `It's ${n2}'s Turn.`
-                // };
-                turn_box.innerHTML = "Player2"
+                  if(n == 1){
+                     turn_box.innerHTML = `It's ${n1}'s Turn.`
+                 }else{
+                     turn_box.innerHTML = `It's ${n2}'s Turn.`
+                 };
              }else{
                  box.innerHTML = "0";
 
@@ -85,7 +101,7 @@ let flag = 1;
 
                  // check
                  if(a1 == "0" && a2 == "0" && a3 == "0"){
-                     console.log(" 0 wins");
+                    console.log("0 wins");
                  }else if(b1 == "0" && b2 == "0" && b3 == "0"){
                      console.log("0 wins");
                  }else if(c1 == "0" && c2 == "0" && c3 == "0"){
@@ -104,12 +120,11 @@ let flag = 1;
 
                  box.disabled = true;
                  flag = 1;
-                //  if(n == 0){
-                //     turn_box.innerHTML = `It's ${n1}'s Turn.`
-                // }else{
-                //     turn_box.innerHTML = `It's ${n2}'s Turn.`
-                // };
-                turn_box.innerHTML = "Player1"
+                  if(n == 0){
+                     turn_box.innerHTML = `It's ${n1}'s Turn.`
+                 }else{
+                     turn_box.innerHTML = `It's ${n2}'s Turn.`
+                 };
              };
          });
      });
@@ -118,17 +133,20 @@ let flag = 1;
 
 // play again
 p_again.addEventListener("click", () => {
+    $(".turn").slideDown();
     let i=0;
     boxes.forEach((box) => {
-        box.innerHTML = "";
-        turn_box.innerHTML = "";   
+        box.innerHTML = "";   
         while(i < 9){
                 boxes[i].disabled = false;
+                boxes[i].style.color = `#fff`
                 console.log(i);
                 i++;
         }
     });
 });
+
+
 
 
 
