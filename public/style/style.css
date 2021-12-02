@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -107,6 +107,7 @@ header {
   width: 250px;
   padding: 2vh;
   border-bottom: 2px solid #494949;
+  font-family: 'Kalam', cursive;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
@@ -115,7 +116,7 @@ header {
   border-bottom: 2px solid white;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
   .container .canvas {
     -ms-grid-columns: (14vh)[3];
         grid-template-columns: repeat(3, 14vh);

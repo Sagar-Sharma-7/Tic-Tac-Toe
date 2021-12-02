@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
 $fg: #fff;
 @mixin flex($jus: center, $alg: center){
     display: flex;
@@ -32,8 +32,7 @@ body{
 
 header{
     color: $fg;
-    // font-family: 'Allura', cursive;
-    font-family: 'Comforter Brush', cursive;
+     font-family: 'Comforter Brush', cursive;
     @include dim(100vw, auto);
     padding: 8vh 0 3vh 0;
     text-align: center;   
@@ -87,6 +86,7 @@ header{
         width: 250px;
         padding: 2vh;
         border-bottom: 2px solid #494949;
+        font-family: 'Kalam', cursive;
         transition: 500ms;
         &:hover{
             border-bottom: 2px solid white;
@@ -94,7 +94,7 @@ header{
     }
 }
 
-@media all and (max-width: 600px){
+@media all and (max-width: 800px){
     .container{
         .canvas{
             grid-template-columns: repeat(3, 14vh);
