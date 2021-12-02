@@ -1,15 +1,11 @@
 const boxes = document.querySelectorAll(".box");
-
-
-
 const turn_box = document.querySelector(".turn");
 const start_btn = document.querySelector("#start_btn");
 const p_again = document.querySelector("#p_again");
 
 
-const n1 = prompt("Name of player 1: ");
-const n2 = prompt("Name of player 2: ");
-
+const n1 = "Player 1"
+const n2 = "Player 2"
 
 
 // winning function
@@ -23,6 +19,9 @@ const win = (x,y,z) => {
     x.style.color = `#56F85B`;
     y.style.color = `#56F85B`;
     z.style.color = `#56F85B`;
+    x.style.borderRadius = "50px";
+    y.style.borderRadius = "50px";
+    z.style.borderRadius = "50px";
     $(".turn").slideUp();
 }
 
@@ -32,7 +31,8 @@ start_btn.addEventListener("click", () => {
     p_again.style.display = "block";
      
     // first turn
-     const n = Math.floor(Math.random() *2);
+    //  const n = Math.floor(Math.random() *2);
+    const n = 0;
               if(n == 0){
                  turn_box.innerHTML = `It's ${n1}'s Turn.`
              }else{
@@ -43,8 +43,6 @@ let flag = 1;
     //  enabling click
      boxes.forEach((box) => {
          box.addEventListener("click", () => {
-             
-            
              if(flag == 1){
                  box.innerHTML = "X";
                  let a1 = document.querySelector("#a1").innerHTML;
@@ -139,7 +137,8 @@ p_again.addEventListener("click", () => {
         box.innerHTML = "";   
         while(i < 9){
                 boxes[i].disabled = false;
-                boxes[i].style.color = `#fff`
+                boxes[i].style.color = `#fff`;
+                boxes[i].style.borderRadius = "10px";
                 console.log(i);
                 i++;
         }

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 $fg: #fff;
 @mixin flex($jus: center, $alg: center){
     display: flex;
@@ -50,7 +51,7 @@ header{
         grid-template-rows: repeat(3, 17vh);
         grid-gap: 5px;
         .box{
-            background: #222222;
+            background: #252525;
             box-shadow: inset 5px 5px 10px #171717,
             inset -5px -5px 10px #2d2d2d;
             border-radius: 10px;
@@ -58,7 +59,8 @@ header{
             @include flex();
             font-size: 2.5rem;
             color: $fg;
-            font-family: 'Allura', cursive;
+            // font-family: 'Allura', cursive;
+            font-family: 'Varela Round', sans-serif;
             font-weight: 900;
         }
     }

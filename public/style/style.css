@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -60,7 +61,7 @@ header {
 }
 
 .container .canvas .box {
-  background: #222222;
+  background: #252525;
   -webkit-box-shadow: inset 5px 5px 10px #171717, inset -5px -5px 10px #2d2d2d;
           box-shadow: inset 5px 5px 10px #171717, inset -5px -5px 10px #2d2d2d;
   border-radius: 10px;
@@ -76,7 +77,7 @@ header {
           align-items: center;
   font-size: 2.5rem;
   color: #fff;
-  font-family: 'Allura', cursive;
+  font-family: 'Varela Round', sans-serif;
   font-weight: 900;
 }
 
