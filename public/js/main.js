@@ -43,6 +43,7 @@ let flag = 1;
     //  enabling click
      boxes.forEach((box) => {
          box.addEventListener("click", () => {
+            window.navigator.vibrate(100);
              if(flag == 1){
                  box.innerHTML = "X";
                  let a1 = document.querySelector("#a1").innerHTML;
