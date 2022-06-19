@@ -51,8 +51,7 @@ header{
         grid-gap: 5px;
         .box{
             background: #252525;
-            box-shadow: inset 5px 5px 10px #171717,
-            inset -5px -5px 10px #2d2d2d;
+            border: 1px solid rgb(57, 57, 57);
             border-radius: 10px;
             cursor: pointer;
             @include flex();
@@ -81,16 +80,15 @@ header{
     }
     #start_btn{
         background: #222222;
-        box-shadow: inset 7px 7px 14px #171717,
-            inset -7px -7px 14px #2d2d2d;
         width: 250px;
         padding: 2vh;
-        border-bottom: 2px solid #494949;
+        border: 2px solid rgb(51, 251, 51);
         font-family: 'Kalam', cursive;
         transition: 500ms;
         &:hover{
             border-bottom: 2px solid white;
-        }
+            background: rgb(51, 251, 51);
+        } 
     }
 }
 
